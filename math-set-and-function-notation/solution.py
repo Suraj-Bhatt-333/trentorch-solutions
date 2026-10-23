@@ -20,4 +20,10 @@ def argmax(values):
     """
     # TODO: Implement argmax from Theory: scan once, tracking the best
     # value and its index, updating only on a strictly larger value.
-    return values.index(max(values))
+
+    max_value = values[0]
+    for i in values:
+        max_value = max(max_value, i)
+    return values.index(max_value)
+    # shortcut
+    # return values.index(max(values))
